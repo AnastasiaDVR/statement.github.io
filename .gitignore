@@ -1,0 +1,10 @@
+/node_modules
+/vendor
+/docker/data
+.env
+.phpunit.result.cache
+docker-compose.override.yml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode

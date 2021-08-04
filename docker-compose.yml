@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  fpm:
+    build: docker/php
+    container_name: fpm.${COMPOSE_PROJECT_NAME}
+    volumes:
+      - ./:/app
+    environment:
+      HOST_IP: ${HOST_IP}
+      XDEBUG_CONFIG: "idekey=PHPSTORM remote_enable=On remote_host=${HOST_IP}"
+
+  db:
+    build: docker/mysql
+    container_name: db.${COMPOSE_PROJECT_NAME}
+    volumes:
+      - ./docker/data/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: ${COMPOSE_PROJECT_NAME}
+      MYSQL_USER: ${COMPOSE_PROJECT_NAME}
+      MYSQL_PASSWORD: ${COMPOSE_PROJECT_NAME}
+      MYSQL_ROOT_PASSWORD: root
+      VIRTUAL_HOST: db.${COMPOSE_PROJECT_NAME}
+
+  rest:
+    build: docker/nginx
+    container_name: rest.${COMPOSE_PROJECT_NAME}
+    depends_on:
+      - fpm
+    volumes:
+      - ./:/app
+      - ./docker/nginx/vhosts/rest.conf:/etc/nginx/sites-enabled/default
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      VIRTUAL_HOST: rest.${COMPOSE_PROJECT_NAME}
