@@ -1,0 +1,14 @@
+html, body{ 
+  min-width: 1200px;
+  background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+}
+
+input {
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all .5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #474747;
+  text-align: left;
+}

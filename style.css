@@ -1,0 +1,104 @@
+html, body{ 
+  min-width: 1200px;
+  background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+}
+
+.selectDIV, .label{
+  padding: 10px;
+  background-color: #fff;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+}
+
+select, input {
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all .5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #474747;
+  text-align: left;
+}
+
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  padding: 5px;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+table th {
+  background-color: #ECE9E0;
+}
+
+table td {
+  padding: 0px;
+  height: 30px;
+  width: 150px;
+}
+
+[contenteditable="true"]:hover {
+  background-color: #f7f0ee;           
+} 
+
+a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 160px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  transition: .3s;
+}
+a:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46,229,157,.4);
+  color: white;
+  transform: translateY(-7px);
+}
+
+#save{  
+  display: none; 
+  margin: 5px 10px 10px;    
+  /*outline: none;*/
+  cursor: pointer;  
+  text-align: center;
+  /*text-decoration: none;*/
+  font: 12px/100% Arial, Helvetica, sans-serif;
+  font-weight:700;  
+  padding: 5px 10px;  
+  border-radius: 5px; 
+  color: #606060;
+  border: solid 1px #b7b7b7;  
+  background: #fff;
+} 
+
+#save:hover
+{
+  background: #ededed;
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+
+.log {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  transition: all .5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #474747;
+  text-align: left;
+}
